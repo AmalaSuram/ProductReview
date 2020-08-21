@@ -19,13 +19,47 @@ public class Orders {
 	private Integer productId;
 	private Double totalPrice;
 	private Integer quantity;
-	@Override
-	public String toString() {
-		return "Orders [orderId=" + orderId + ", userId=" + userId + ", productId=" + productId + ", totalPrice="
-				+ totalPrice + ", quantity=" + quantity + ", getOrderId()=" + getOrderId() + ", getUserId()="
-				+ getUserId() + ", getProductId()=" + getProductId() + ", getTotalPrice()=" + getTotalPrice()
-				+ ", getQuantity()=" + getQuantity() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+	
+	
+	
+	public Integer getOrderId() {
+		return orderId;
+	}
+	public void setOrderId(Integer orderId) {
+		this.orderId = orderId;
+	}
+	public Integer getUserId() {
+		return userId;
+	}
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+	public Integer getProductId() {
+		return productId;
+	}
+	public void setProductId(Integer productId) {
+		this.productId = productId;
+	}
+	public Double getTotalPrice() {
+		return totalPrice;
+	}
+	public void setTotalPrice(Double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+	public Integer getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+		
+	}	
+		@Override
+		public String toString() {
+			return "Orders [orderId=" + orderId + ", userId=" + userId + ", productId=" + productId + ", totalPrice="
+					+ totalPrice + ", quantity=" + quantity + ", getOrderId()=" + getOrderId() + ", getUserId()="
+					+ getUserId() + ", getProductId()=" + getProductId() + ", getTotalPrice()=" + getTotalPrice()
+					+ ", getQuantity()=" + getQuantity() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+					+ ", toString()=" + super.toString() + "]";
 	}
 	
 }

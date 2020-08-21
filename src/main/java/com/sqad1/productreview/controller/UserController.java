@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sqad1.productreview.constant.AppConstant;
 import com.sqad1.productreview.dto.UserRequestDto;
 import com.sqad1.productreview.dto.UserResponseDto;
-import com.sqad1.productreview.entity.User;
 import com.sqad1.productreview.service.UserService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -30,7 +29,7 @@ public class UserController {
 	 */
 	@PostMapping("/createuser")
 	public ResponseEntity<UserResponseDto> saveUser(@RequestBody UserRequestDto userdto) {
-		log.info(" Inside the Create the users  based on user input...");
+		//log.info(" Inside the Create the users  based on user input...");
 		UserResponseDto userResponse = userService.saveUser(userdto);
 		userResponse.setMessage(AppConstant.SUCCESS_STATUS_MESSAGE);
 		userResponse.setStatusCode(HttpStatus.OK.value());
