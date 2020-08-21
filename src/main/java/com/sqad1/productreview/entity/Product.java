@@ -17,4 +17,12 @@ public class Product {
 	private Integer productId;
 	private String productName;
 	private Double productPrice;
+	@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", productName=" + productName + ", productPrice=" + productPrice
+				+ ", getProductId()=" + getProductId() + ", getProductName()=" + getProductName()
+				+ ", getProductPrice()=" + getProductPrice() + ", getClass()=" + getClass() + ", hashCode()="
+				+ hashCode() + ", toString()=" + super.toString() + "]";
+	}
+	
 }

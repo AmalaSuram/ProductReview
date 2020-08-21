@@ -19,4 +19,13 @@ public class Orders {
 	private Integer productId;
 	private Double totalPrice;
 	private Integer quantity;
+	@Override
+	public String toString() {
+		return "Orders [orderId=" + orderId + ", userId=" + userId + ", productId=" + productId + ", totalPrice="
+				+ totalPrice + ", quantity=" + quantity + ", getOrderId()=" + getOrderId() + ", getUserId()="
+				+ getUserId() + ", getProductId()=" + getProductId() + ", getTotalPrice()=" + getTotalPrice()
+				+ ", getQuantity()=" + getQuantity() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
+	}
+	
 }
