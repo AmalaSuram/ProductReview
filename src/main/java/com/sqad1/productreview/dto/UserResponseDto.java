@@ -10,4 +10,5 @@ public class UserResponseDto {
 	private Integer userId;
 	private Integer statusCode;
 	private String message;
+	
 }
