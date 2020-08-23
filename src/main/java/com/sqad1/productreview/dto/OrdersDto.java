@@ -2,11 +2,17 @@ package com.sqad1.productreview.dto;
 
 public class OrdersDto {
 
+	private Integer orderId;
 	private Integer userId;
 	private Integer productId;
+	private Double totalPrice;
 	private Integer quantity;
-	private double totalPrice;
-	
+	public Integer getOrderId() {
+		return orderId;
+	}
+	public void setOrderId(Integer orderId) {
+		this.orderId = orderId;
+	}
 	public Integer getUserId() {
 		return userId;
 	}
@@ -19,19 +25,18 @@ public class OrdersDto {
 	public void setProductId(Integer productId) {
 		this.productId = productId;
 	}
+	public Double getTotalPrice() {
+		return totalPrice;
+	}
+	public void setTotalPrice(Double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
 	public Integer getQuantity() {
 		return quantity;
 	}
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
-	public double getTotalPrice() {
-		return totalPrice;
-	}
-	public void setTotalPrice(double totalPrice) {
-		this.totalPrice = totalPrice;
-	}
-	
 	
 	
 }

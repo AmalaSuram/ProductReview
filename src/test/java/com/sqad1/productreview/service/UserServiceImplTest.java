@@ -1,6 +1,6 @@
 package com.sqad1.productreview.service;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -11,7 +11,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.beans.BeanUtils;
-import static org.junit.Assert.assertTrue;
+
 import com.sqad1.productreview.dto.UserRequestDto;
 import com.sqad1.productreview.dto.UserResponseDto;
 import com.sqad1.productreview.entity.User;
@@ -24,33 +24,32 @@ public class UserServiceImplTest {
 	@Mock
 	UserRepository userRepository;
 
-	
-	UserRequestDto userdto = new UserRequestDto();
-	UserResponseDto userResponseDto=new UserResponseDto();
+	User user = new User();
+
+	UserResponseDto userResponseDto = new UserResponseDto();
+
 	@Before
 	public void init() {
-		
-		//userResponseDto.setUserId(1);
-		//userResponseDto.setUserId(userId);
-	
+		user.setUserId(51784768);
+		user.setUserName("amala");
+		user.setAddress("anantapur");
+		user.setPhoneNumber(7680920258L);
+		user.setEmail("amala@gmail.com");
+
+		userResponseDto.setUserId(51784768);
+
 	}
 
 	@Test
 	public void testsaveUser() {
-		User user = new User();
-		user.setUserId(1);
-		user.setAddress("anantapur");
-		user.setEmail("amala@gamil.com");
-		user.setPhoneNumber(7680920258L);
-		user.setUserName("amala");
-		userResponseDto.setUserId(1);
-		Mockito.when(userRepository.save(user)).thenReturn(user);
-		BeanUtils.copyProperties(user, userdto);
 
-		Assert.assertNotNull(userResponseDto);
-     
+		Mockito.when(userRepository.save(Mockito.any(User.class))).thenReturn(user);
+		UserRequestDto userdto = new UserRequestDto();
+		BeanUtils.copyProperties(user, userdto);
+		UserResponseDto saveUser = userServiceImpl.saveUser(userdto);
+
+	assertEquals(51784768, saveUser.getUserId());
 		
-			
 	}
 
 }

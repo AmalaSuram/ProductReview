@@ -1,21 +1,17 @@
 package com.sqad1.productreview.dto;
 
+import java.util.List;
 
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
-public class UserResponseDto {
-	private Integer userId;
+public class OrderListDto {
+	private List<OrdersDto> ordderlist;
 	private Integer statusCode;
 	private String message;
-
-	public Integer getUserId() {
-		return userId;
+	public List<OrdersDto> getOrdderlist() {
+		return ordderlist;
 	}
-	public void setUserId(Integer userId) {
-		this.userId = userId;
+	public void setOrdderlist(List<OrdersDto> ordderlist) {
+		this.ordderlist = ordderlist;
 	}
 	public Integer getStatusCode() {
 		return statusCode;
@@ -30,5 +26,4 @@ public class UserResponseDto {
 		this.message = message;
 	}
 	
-
 }
